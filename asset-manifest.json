@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f25461b3.css",
+    "main.js": "/static/js/main.5ff6bca0.js",
+    "static/media/DecoupeBerney_072.png": "/static/media/DecoupeBerney_072.99e1afa0b9f6fb946614.png",
+    "static/media/commune_lausanne.png": "/static/media/commune_lausanne.7a51afb7a8511fcc38a8.png",
+    "static/media/map.png": "/static/media/map.de8992b9a0b7b79bc53d.png",
+    "index.html": "/index.html",
+    "main.f25461b3.css.map": "/static/css/main.f25461b3.css.map",
+    "main.5ff6bca0.js.map": "/static/js/main.5ff6bca0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f25461b3.css",
+    "static/js/main.5ff6bca0.js"
+  ]
+}
