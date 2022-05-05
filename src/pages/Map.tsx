@@ -4,6 +4,7 @@ import google_map from './../assets/map.png';
 const Map: FC = () => {
   return (
     <div>
+      <h1 className="text-4xl text-left text-gray-900 pb-8">Cadastre de Berney</h1>
       <div id="map">
         <img src={google_map} alt="" className="w-full" />
       </div>

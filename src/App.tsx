@@ -31,6 +31,10 @@ function App() {
           PageMaker including versions of Lorem Ipsum.`}
             </p>
           </section>
+
+          <div>
+            <h2 className="text-4xl text-gray-900 text-left">Sources</h2>
+          </div>
         </div>
       </div>
 
