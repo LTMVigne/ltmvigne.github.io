@@ -8,7 +8,6 @@ const Cadastre: FC = () => {
   const years = [1831, 1873, 1920, 2022];
   const cadastres = [google_map_0, google_map_1, google_map_2, google_map_3];
   const [slider, setSlider] = useState(0);
-  const [cadastreToDisplay, setCadastreToDisplay] = useState([]);
   const [opacities, setOpacities] = useState([1, 0, 0, 0]); // between [0, 1]
   const [legend, setLegend] = useState(1832);
 
@@ -55,6 +54,24 @@ const Cadastre: FC = () => {
     <div id="cadastre" className="pt-10">
       <h1 className="text-4xl text-left text-gray-900 pb-8">Cadastre de Berney</h1>
       <div id="maps" className="w-full h-[610px] relative">
+        <div className="absolute top-2 left-2 z-10 px-2 py-2 bg-white rounded-md">
+          <div>
+            <div className="flex-col w-min">
+              <label id="year" htmlFor="slider" className="flex-auto w-full text-left">
+                Year: {legend}
+              </label>
+              <input
+                onChange={(e) => handleSlider(e)}
+                id="slider"
+                type="range"
+                min="0"
+                max="1"
+                step="0.001"
+                value={slider}
+              />
+            </div>
+          </div>
+        </div>
         {cadastres.map((cadastre, index) => (
           <img
             key={index}
@@ -64,26 +81,6 @@ const Cadastre: FC = () => {
             alt=""
           />
         ))}
-      </div>
-
-      <div>
-        <div>
-          <h2>Year:</h2>
-          <div>
-            <label id="year" htmlFor="slider">
-              {legend}
-            </label>
-            <input
-              onChange={(e) => handleSlider(e)}
-              id="slider"
-              type="range"
-              min="0"
-              max="1"
-              step="0.001"
-              value={slider}
-            />
-          </div>
-        </div>
       </div>
     </div>
   );
