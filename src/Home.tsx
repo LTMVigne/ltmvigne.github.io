@@ -10,8 +10,8 @@ const Home: FC = () => {
       >
         <div className="flex h-full max-w-7xl mx-auto px-4 sm:px-6">
           <div className="mt-16">
-            <h1 className="text-left text-7xl font-bold py-4 text-gray-900">Lausanne Time Machine</h1>
-            <h1 className="text-left text-4xl text-gray-900">Groupe Cadastre</h1>
+            <h1 className="text-left text-8xl font-bold py-5 text-gray-900">Lausanne Time Machine</h1>
+            <h1 className="text-left text-5xl text-gray-900">Cadastre: Les vignes du sud lausannois</h1>
           </div>
         </div>
       </article>

@@ -23,16 +23,28 @@ const NavBar = () => {
             <a href="#" className="mx-4 text-xl font-medium text-gray-700 hover:text-gray-900">
               Home
             </a>
-            <a href="#" className="mx-4 text-xl font-medium text-gray-700 hover:text-gray-900">
+            <a href="#intro" className="mx-4 text-xl font-medium text-gray-700 hover:text-gray-900">
               Project
             </a>
-          </Popover.Group>
-
-          <Popover.Group as="nav" className="hidden md:flex w-fit justify-center">
-            <a href="#" className="text-xl font-medium text-gray-700 hover:text-gray-900">
+            <a href="#cadastre" className="mx-4 text-xl font-medium text-gray-700 hover:text-gray-900">
+              Cadastres
+            </a>
+            <a href="#dynamique" className="mx-4 text-xl font-medium text-gray-700 hover:text-gray-900">
+              Dynamique
+            </a>
+            <a href="#source" className="mx-4 text-xl font-medium text-gray-700 hover:text-gray-900">
+              Sources
+            </a>
+            <a href="#about" className="mx-4 text-xl font-medium text-gray-700 hover:text-gray-900">
               About
             </a>
           </Popover.Group>
+
+          {/* <Popover.Group as="nav" className="hidden md:flex w-fit justify-center">
+            <a href="#about" className="text-xl font-medium text-gray-700 hover:text-gray-900">
+              About
+            </a>
+          </Popover.Group> */}
         </div>
       </div>
 

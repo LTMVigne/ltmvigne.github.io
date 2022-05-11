@@ -6,7 +6,7 @@ const Footer: FC = () => {
       <span className="text-sm text-gray-700 sm:text-center">
         © 2022 - LTM Cadastre 3{' '}
         <a href="#" className="px-2 hover:underline">
-          htps://
+          https://github.com/LTMVigne/ltmvigne.github.io
         </a>
       </span>
     </footer>

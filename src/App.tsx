@@ -1,11 +1,18 @@
 import React from 'react';
-import { ParallaxProvider } from 'react-scroll-parallax';
 import './App.css';
 import Footer from './Footer';
 import Home from './Home';
 import NavBar from './NavBar';
+import Context from './pages/Contexte';
+import Demarche from './pages/Demarche';
+import Dynamique from './pages/dynamique/Dynamique';
+import Preservation from './pages/dynamique/Preservation';
+import Tourisme from './pages/dynamique/Tourisme';
+import Urbanisation from './pages/dynamique/Urbanisation';
 import Intro from './pages/Intro';
-import Map from './pages/Map';
+import Cadastre from './pages/Cadastre';
+import Source from './pages/Source';
+import About from './pages/About';
 
 function App() {
   return (
@@ -18,23 +25,16 @@ function App() {
         <Home />
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <Intro />
-          <Map />
+          <Context />
+          <Cadastre />
+          <Demarche />
+          <Dynamique />
+          <Tourisme />
+          <Urbanisation />
+          <Preservation />
 
-          <section className="py-20">
-            <h1 className="text-4xl text-left">Another paragraph</h1>
-            <p className="indent-5 text-lg text-justify py-4">
-              {`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-          standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-          make a type specimen book. It has survived not only five centuries, but also the leap into electronic
-          typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
-          sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
-          PageMaker including versions of Lorem Ipsum.`}
-            </p>
-          </section>
-
-          <div>
-            <h2 className="text-4xl text-gray-900 text-left">Sources</h2>
-          </div>
+          <Source />
+          <About />
         </div>
       </div>
 
