@@ -33,8 +33,14 @@ function App() {
           <Urbanisation />
           <Preservation />
 
-          <Source />
-          <About />
+          <div className="flex">
+            <div className="w-1/2">
+              <Source />
+            </div>
+            <div className="w-1/2">
+              <About />
+            </div>
+          </div>
         </div>
       </div>
 

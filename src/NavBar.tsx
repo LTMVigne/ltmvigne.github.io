@@ -63,7 +63,7 @@ const NavBar = () => {
               <div className="flex items-center justify-between">
                 <div className="font-bold text-2xl">LTM</div>
                 <div className="-mr-2">
-                  <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                  <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
                     <span className="sr-only">Close menu</span>
                     <XIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
@@ -76,12 +76,27 @@ const NavBar = () => {
                   </a>
                 </nav>
                 <nav className="grid gap-y-8 text-lg">
-                  <a href="index" className="text-xl font-medium text-gray-700 hover:text-gray-900">
+                  <a href="#intro" className="text-xl font-medium text-gray-700 hover:text-gray-900">
                     Project
                   </a>
                 </nav>
                 <nav className="grid gap-y-8 text-lg">
-                  <a href="index" className="text-xl font-medium text-gray-700 hover:text-gray-900">
+                  <a href="#cadastre" className="text-xl font-medium text-gray-700 hover:text-gray-900">
+                    Cadastres
+                  </a>
+                </nav>
+                <nav className="grid gap-y-8 text-lg">
+                  <a href="#dynamique" className="text-xl font-medium text-gray-700 hover:text-gray-900">
+                    Dynamique
+                  </a>
+                </nav>
+                <nav className="grid gap-y-8 text-lg">
+                  <a href="#source" className="text-xl font-medium text-gray-700 hover:text-gray-900">
+                    Sources
+                  </a>
+                </nav>
+                <nav className="grid gap-y-8 text-lg">
+                  <a href="#about" className="text-xl font-medium text-gray-700 hover:text-gray-900">
                     About
                   </a>
                 </nav>
