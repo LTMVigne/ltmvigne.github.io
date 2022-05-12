@@ -4,7 +4,7 @@ import Footer from './Footer';
 import Home from './Home';
 import NavBar from './NavBar';
 import Context from './pages/Contexte';
-import Demarche from './pages/Demarche';
+import Processus from './pages/Processus';
 import Dynamique from './pages/dynamique/Dynamique';
 import Preservation from './pages/dynamique/Preservation';
 import Tourisme from './pages/dynamique/Tourisme';
@@ -27,7 +27,7 @@ function App() {
           <Intro />
           <Context />
           <Cadastre />
-          <Demarche />
+          <Processus />
           <Dynamique />
           <Tourisme />
           <Urbanisation />

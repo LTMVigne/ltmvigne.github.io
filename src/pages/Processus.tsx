@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 
-const Demarche: FC = () => {
+const Processus: FC = () => {
   return (
-    <div id="demarche" className="block md:flex md:flex-wrap mt-10 pt-10">
+    <div id="Processus" className="block md:flex md:flex-wrap mt-10 pt-10">
       <div className="flex-1 md:pr-14 self-center pb-8">
         <h1 className="text-4xl text-left text-gray-900">Démarche</h1>
         <p className="indent-5 text-lg text-justify py-4">
@@ -18,4 +18,4 @@ const Demarche: FC = () => {
   );
 };
 
-export default Demarche;
+export default Processus;
