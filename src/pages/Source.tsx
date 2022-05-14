@@ -6,7 +6,7 @@ const Source: FC = () => {
       <div className="flex-1 md:pr-14 self-center pb-8">
         <h1 className="text-4xl text-left text-gray-900">Sources</h1>
         <ul className="text-lg text-left py-4 px-10 list-decimal">
-          <li>Cadastre de Berney, 1831</li>
+          <li>Cadastre de Berney, 1832</li>
           <li>
             <a
               target="#"

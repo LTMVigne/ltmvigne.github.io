@@ -5,7 +5,7 @@ import google_map_2 from './../assets/map_2.png';
 import google_map_3 from './../assets/map_3.png';
 
 const Cadastre: FC = () => {
-  const years = [1831, 1873, 1920, 2022];
+  const years = [1832, 1873, 1920, 2022];
   const cadastres = [google_map_0, google_map_1, google_map_2, google_map_3];
   const titres = ['Cadastre de Berney', 'Carte Siegried', 'Carte 2', 'Carte 3'];
   const [slider, setSlider] = useState(0);

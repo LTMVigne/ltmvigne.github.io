@@ -11,8 +11,8 @@ const Home: FC = () => {
         <div className="flex h-full max-w-7xl mx-auto px-4 sm:px-6">
           <div className="mt-4 xl:mt-16">
             <h1 className="text-left text-8xl font-bold py-5 text-gray-900">Lausanne Time Machine</h1>
-            <h1 className="text-left text-5xl font-bold md:font-normal text-gray-900">
-              Cadastre: Les vignes du sud lausannois
+            <h1 className="lg:text-right text-left text-5xl font-bold md:font-normal text-gray-900">
+              Les vignes du sud lausannois
             </h1>
           </div>
         </div>

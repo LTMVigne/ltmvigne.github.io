@@ -13,6 +13,7 @@ import Intro from './pages/Intro';
 import Cadastre from './pages/Cadastre';
 import Source from './pages/Source';
 import About from './pages/About';
+import Cad from './pages/C';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Intro />
           <Context />
           <Cadastre />
+          <Cad />
           <Processus />
           <Dynamique />
           <Tourisme />
