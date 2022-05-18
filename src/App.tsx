@@ -10,10 +10,9 @@ import Preservation from './pages/dynamique/Preservation';
 import Tourisme from './pages/dynamique/Tourisme';
 import Urbanisation from './pages/dynamique/Urbanisation';
 import Intro from './pages/Intro';
-import Cadastre from './pages/Cadastre';
 import Source from './pages/Source';
 import About from './pages/About';
-import Cad from './pages/C';
+import Cadastre from './pages/Cadastre';
 
 function App() {
   return (
@@ -28,7 +27,6 @@ function App() {
           <Intro />
           <Context />
           <Cadastre />
-          <Cad />
           <Processus />
           <Dynamique />
           <Tourisme />

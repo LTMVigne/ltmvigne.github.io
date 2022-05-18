@@ -1,15 +1,40 @@
 import React, { FC, useEffect, useState } from 'react';
-import { LayerGroup, MapContainer, TileLayer, useMap } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
+import google_map_0 from './../assets/map.png';
+import google_map_1 from './../assets/map_1.png';
+import google_map_2 from './../assets/map_2.png';
+import google_map_3 from './../assets/map_3.png';
 
 const Cadastre: FC = () => {
   const years = [1832, 1873, 1920, 2022];
-  //const cadastres = [google_map_0, google_map_1, google_map_2, google_map_3];
+  const cadastres = [google_map_0, google_map_1, google_map_2, google_map_3];
   const titres = ['Cadastre de Berney', 'Carte Siegried', 'Carte 2', 'Carte 3'];
   const [slider, setSlider] = useState(0);
   const [opacities, setOpacities] = useState([1, 0, 0, 0]); // between [0, 1]
   const [legend, setLegend] = useState(1832);
   const [title, setTitle] = useState('');
+
+  useEffect(() => {
+    const newOpacity = [...opacities];
+    if (slider < 0.25) {
+      newOpacity[0] = 1 - slider / 0.25;
+      newOpacity[1] = slider / 0.25;
+      newOpacity[2] = 0;
+      newOpacity[3] = 0;
+    } else if (slider >= 0.25 && slider < 0.5) {
+      newOpacity[0] = 0;
+      newOpacity[1] = 1 - (slider - 0.25) / 0.25;
+      newOpacity[2] = (slider - 0.25) / 0.5;
+      newOpacity[3] = 0;
+    } else if (slider >= 0.5 && slider < 0.75) {
+      newOpacity[0] = 0;
+      newOpacity[1] = 0;
+      newOpacity[2] = 1 - (slider - 0.5) / 0.25;
+      newOpacity[3] = (slider - 0.5) / 0.25;
+    } else {
+    }
+
+    setOpacities(newOpacity);
+  }, [slider]);
 
   useEffect(() => {
     if (slider < 0.25) {
@@ -34,7 +59,7 @@ const Cadastre: FC = () => {
   return (
     <div id="cadastre" className="pt-10">
       <h1 className="text-4xl text-left text-gray-900 pb-8">Cadastres et cartes</h1>
-      <div id="map" className=" relative h-[600px]">
+      <div id="maps" className="w-full md:h-[610px] h-[400px] relative">
         <div className="absolute bottom-2 left-2 z-10">
           <div className="text-left bg-white rounded-md px-3 py-3 mb-2">
             <span>{title}</span>
@@ -55,12 +80,15 @@ const Cadastre: FC = () => {
             />
           </div>
         </div>
-        <MapContainer center={[46.519653, 6.632273]} zoom={13} scrollWheelZoom={false}>
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        {cadastres.map((cadastre, index) => (
+          <img
+            key={index}
+            style={{ opacity: `${opacities[index]}` }}
+            className="w-full md:h-[610px] h-[400px] object-cover absolute top-0 left-0"
+            src={cadastre}
+            alt=""
           />
-        </MapContainer>
+        ))}
       </div>
       <p className="indent-5 text-lg text-justify py-8">
         {`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
