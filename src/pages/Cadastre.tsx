@@ -1,15 +1,5 @@
 import React, { FC, useEffect, useState } from 'react';
-import {
-  LayerGroup,
-  MapContainer,
-  TileLayer,
-  useMap,
-  GeoJSON,
-  LayersControl,
-  Marker,
-  Popup,
-  Circle,
-} from 'react-leaflet';
+import { LayerGroup, MapContainer, TileLayer, GeoJSON, LayersControl } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import vignes_1832_json from './cartes/vignes_1832.json';
 import L, { LatLngExpression } from 'leaflet';
@@ -22,6 +12,8 @@ const Cadastre: FC = () => {
   const [opacities, setOpacities] = useState([1, 0, 0, 0]); // between [0, 1]
   const [legend, setLegend] = useState(1832);
   const [title, setTitle] = useState('');
+
+  const berney = '#03b1fc';
 
   const center: LatLngExpression = [46.519653, 6.632273];
 
@@ -83,6 +75,7 @@ const Cadastre: FC = () => {
               </LayerGroup>
             </LayersControl.Overlay>
           </LayersControl>
+          <LayerGroup>{slider < 0.25 && <GeoJSON data={vignes_1832} style={{ color: berney }} />}</LayerGroup>
         </MapContainer>
       </div>
       <p className="indent-5 text-lg text-justify py-8">
