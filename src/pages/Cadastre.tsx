@@ -1,6 +1,18 @@
 import React, { FC, useEffect, useState } from 'react';
-import { LayerGroup, MapContainer, TileLayer, useMap } from 'react-leaflet';
+import {
+  LayerGroup,
+  MapContainer,
+  TileLayer,
+  useMap,
+  GeoJSON,
+  LayersControl,
+  Marker,
+  Popup,
+  Circle,
+} from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
+import vignes_1832_json from './cartes/vignes_1832.json';
+import L, { LatLngExpression } from 'leaflet';
 
 const Cadastre: FC = () => {
   const years = [1832, 1873, 1920, 2022];
@@ -10,6 +22,10 @@ const Cadastre: FC = () => {
   const [opacities, setOpacities] = useState([1, 0, 0, 0]); // between [0, 1]
   const [legend, setLegend] = useState(1832);
   const [title, setTitle] = useState('');
+
+  const center: LatLngExpression = [46.519653, 6.632273];
+
+  const vignes_1832 = JSON.parse(JSON.stringify(vignes_1832_json));
 
   useEffect(() => {
     if (slider < 0.25) {
@@ -55,11 +71,18 @@ const Cadastre: FC = () => {
             />
           </div>
         </div>
-        <MapContainer center={[46.519653, 6.632273]} zoom={13} scrollWheelZoom={false}>
+        <MapContainer center={center} zoom={14} scrollWheelZoom={false}>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
+          <LayersControl position="topright">
+            <LayersControl.Overlay checked name="Vignes 1832">
+              <LayerGroup>
+                <GeoJSON data={vignes_1832} />
+              </LayerGroup>
+            </LayersControl.Overlay>
+          </LayersControl>
         </MapContainer>
       </div>
       <p className="indent-5 text-lg text-justify py-8">
