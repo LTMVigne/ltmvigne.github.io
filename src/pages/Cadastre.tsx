@@ -13,7 +13,7 @@ const Cadastre: FC = () => {
   const years = [1832, 1873, 1920, 2022];
   const titres = ['Cadastre de Berney', 'Carte Siegried', 'Carte 2', 'Carte 3'];
   const [slider, setSlider] = useState(0);
-  const [legend, setLegend] = useState(1832);
+  const [year, setYear] = useState(1832);
   const [title, setTitle] = useState('');
   const [showLayers, setShowLayers] = useState(true);
 
@@ -28,10 +28,10 @@ const Cadastre: FC = () => {
   const siegfriedLayer = useRef();
 
   // Styles
-  const berney = '#03b1fc';
+  const berney = '#0EA5E9';
   const siegfried = '#8a46d4';
-  const apparues = '#28bd28';
-  const disparues = '#b01c1c';
+  const apparues = '#22C55E';
+  const disparues = '#B91C1C';
 
   // Control if the base layers are shown
   const ShowBaseLayers = () => {
@@ -51,16 +51,16 @@ const Cadastre: FC = () => {
 
   useEffect(() => {
     if (slider < 0.25) {
-      setLegend(years[0]);
+      setYear(years[0]);
       setTitle(titres[0]);
     } else if (slider >= 0.25 && slider < 0.5) {
-      setLegend(years[1]);
+      setYear(years[1]);
       setTitle(titres[1]);
     } else if (slider >= 0.5 && slider < 0.75) {
-      setLegend(years[2]);
+      setYear(years[2]);
       setTitle(titres[2]);
     } else {
-      setLegend(years[3]);
+      setYear(years[3]);
       setTitle(titres[3]);
     }
   }, [slider]);
@@ -72,14 +72,40 @@ const Cadastre: FC = () => {
   return (
     <div id="cadastre" className="pt-10">
       <h1 className="text-4xl text-left text-gray-900 pb-8">Cadastres et cartes</h1>
-      <div id="map" className=" relative h-[600px]">
+      <div id="map" className="relative h-[600px]">
         <div className="absolute bottom-2 left-2 z-10">
           <div className="text-left bg-white rounded-md px-3 py-3 mb-2">
-            <span>{title}</span>
+            Légende:
+            <div className="text-sm">
+              <ul>
+                <li>
+                  <div className="flex items-center">
+                    <div className="block h-0.5 w-4 bg-sky-500 mr-2"></div>
+                    <div>Vignes de 1832</div>
+                  </div>
+                </li>
+                <li>
+                  <div className="flex items-center">
+                    <div className="block h-0.5 w-4 bg-green-500 mr-2"></div>
+                    <div>Nouvelles vignes</div>
+                  </div>
+                </li>
+                <li>
+                  <div className="flex items-center">
+                    <div className="block h-0.5 w-4 bg-red-700 mr-2"></div>
+                    <div>Anciennes vignes</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
+
           <div className="block w-min text-left bg-white rounded-md px-3 py-3">
+            <div>
+              <span>{title}</span>
+            </div>
             <label id="year" htmlFor="slider" className="w-full text-left">
-              <span className="text-gray-800 my-2">Année: {legend}</span>
+              <span className="text-gray-800 my-2 text-sm">Année: {year}</span>
             </label>
             <input
               onChange={(e) => handleSlider(e)}
@@ -93,7 +119,7 @@ const Cadastre: FC = () => {
             />
           </div>
         </div>
-        <MapContainer center={center} zoom={14} scrollWheelZoom={false} /*ref={setMap}*/>
+        <MapContainer center={center} zoom={14} scrollWheelZoom={false}>
           <ShowBaseLayers />
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -118,7 +144,7 @@ const Cadastre: FC = () => {
           <LayersControl position="topright">
             <LayersControl.Overlay name="Vignes 1832">
               <LayerGroup ref={berneyLayer}>
-                <GeoJSON data={vignes_1832} />
+                <GeoJSON data={vignes_1832} style={{ color: berney }} />
               </LayerGroup>
             </LayersControl.Overlay>
 
