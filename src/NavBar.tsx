@@ -36,7 +36,7 @@ const NavBar = () => {
               Sources
             </a>
             <a href="#about" className="mx-4 text-xl font-medium text-gray-700 hover:text-gray-900">
-              About
+              A Propos
             </a>
           </Popover.Group>
 
@@ -97,7 +97,7 @@ const NavBar = () => {
                 </nav>
                 <nav className="grid gap-y-8 text-lg">
                   <a href="#about" className="text-xl font-medium text-gray-700 hover:text-gray-900">
-                    About
+                    A Propos
                   </a>
                 </nav>
               </div>

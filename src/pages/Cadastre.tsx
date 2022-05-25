@@ -1,23 +1,52 @@
-import React, { FC, useEffect, useState } from 'react';
-import { LayerGroup, MapContainer, TileLayer, GeoJSON, LayersControl } from 'react-leaflet';
+import React, { FC, useEffect, useRef, useState } from 'react';
+import { LayerGroup, MapContainer, TileLayer, GeoJSON, LayersControl, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import vignes_1832_json from './cartes/vignes_1832.json';
+import vignes_1873_json from './cartes/vignes_1873.json';
+import vignes_1873_apparues_json from './cartes/vignes_1873_apparues.json';
+import vignes_1873_disparues_json from './cartes/vignes_1873_disparues.json';
 import L, { LatLngExpression } from 'leaflet';
 
 const Cadastre: FC = () => {
   const years = [1832, 1873, 1920, 2022];
-  //const cadastres = [google_map_0, google_map_1, google_map_2, google_map_3];
   const titres = ['Cadastre de Berney', 'Carte Siegried', 'Carte 2', 'Carte 3'];
   const [slider, setSlider] = useState(0);
-  const [opacities, setOpacities] = useState([1, 0, 0, 0]); // between [0, 1]
   const [legend, setLegend] = useState(1832);
   const [title, setTitle] = useState('');
 
+  const [showLayers, setShowLayers] = useState(true);
+
   const berney = '#03b1fc';
+
+  const siegfried = '#8a46d4';
+
+  const apparues = '#28bd28';
+  const disparues = '#b01c1c';
 
   const center: LatLngExpression = [46.519653, 6.632273];
 
   const vignes_1832 = JSON.parse(JSON.stringify(vignes_1832_json));
+  const vignes_1873 = JSON.parse(JSON.stringify(vignes_1873_json));
+  const vignes_1873_a = JSON.parse(JSON.stringify(vignes_1873_apparues_json));
+  const vignes_1873_d = JSON.parse(JSON.stringify(vignes_1873_disparues_json));
+
+  const berneyLayer = useRef();
+  const siegfriedLayer = useRef();
+
+  const ShowBase = () => {
+    const map = useMap();
+    map.on('overlayadd', () => {
+      setShowLayers(false);
+    });
+    map.on('overlayremove', () => {
+      if (!map.hasLayer(berneyLayer.current) && !map.hasLayer(siegfriedLayer.current)) {
+        setShowLayers(true);
+      } else {
+        setShowLayers(false);
+      }
+    });
+    return null;
+  };
 
   useEffect(() => {
     if (slider < 0.25) {
@@ -63,19 +92,42 @@ const Cadastre: FC = () => {
             />
           </div>
         </div>
-        <MapContainer center={center} zoom={14} scrollWheelZoom={false}>
+        <MapContainer center={center} zoom={14} scrollWheelZoom={false} /*ref={setMap}*/>
+          <ShowBase />
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
+
+          {/*Base layers with dynamic change*/}
+          <LayerGroup>
+            {showLayers && slider <= 0.25 && <GeoJSON data={vignes_1832} style={{ color: berney }} />}
+          </LayerGroup>
+          <LayerGroup>
+            {showLayers && slider > 0.25 && (
+              <>
+                <GeoJSON data={vignes_1873} style={{ color: berney }} />
+                <GeoJSON data={vignes_1873_a} style={{ color: apparues }} />
+                <GeoJSON data={vignes_1873_d} style={{ color: disparues }} />
+              </>
+            )}
+          </LayerGroup>
+
+          {/*Layers showing for each years all the vignes*/}
           <LayersControl position="topright">
-            <LayersControl.Overlay checked name="Vignes 1832">
-              <LayerGroup>
+            <LayersControl.Overlay name="Vignes 1832">
+              <LayerGroup ref={berneyLayer}>
                 <GeoJSON data={vignes_1832} />
               </LayerGroup>
             </LayersControl.Overlay>
+
+            <LayersControl.Overlay name="Vignes 1873">
+              <LayerGroup ref={siegfriedLayer}>
+                <GeoJSON data={vignes_1873_a} style={{ color: siegfried }} />
+                <GeoJSON data={vignes_1873} style={{ color: siegfried }} />
+              </LayerGroup>
+            </LayersControl.Overlay>
           </LayersControl>
-          <LayerGroup>{slider < 0.25 && <GeoJSON data={vignes_1832} style={{ color: berney }} />}</LayerGroup>
         </MapContainer>
       </div>
       <p className="indent-5 text-lg text-justify py-8">
@@ -91,3 +143,10 @@ const Cadastre: FC = () => {
 };
 
 export default Cadastre;
+
+/*                eventHandlers={{
+                  click: () => {
+                    console.log('click');
+                    handleShow();
+                  },
+                }}*/
