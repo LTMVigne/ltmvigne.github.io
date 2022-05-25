@@ -5,35 +5,36 @@ import vignes_1832_json from './cartes/vignes_1832.json';
 import vignes_1873_json from './cartes/vignes_1873.json';
 import vignes_1873_apparues_json from './cartes/vignes_1873_apparues.json';
 import vignes_1873_disparues_json from './cartes/vignes_1873_disparues.json';
-import L, { LatLngExpression } from 'leaflet';
+import { LatLngExpression } from 'leaflet';
 
 const Cadastre: FC = () => {
+  const center: LatLngExpression = [46.519653, 6.632273];
+
   const years = [1832, 1873, 1920, 2022];
   const titres = ['Cadastre de Berney', 'Carte Siegried', 'Carte 2', 'Carte 3'];
   const [slider, setSlider] = useState(0);
   const [legend, setLegend] = useState(1832);
   const [title, setTitle] = useState('');
-
   const [showLayers, setShowLayers] = useState(true);
 
-  const berney = '#03b1fc';
-
-  const siegfried = '#8a46d4';
-
-  const apparues = '#28bd28';
-  const disparues = '#b01c1c';
-
-  const center: LatLngExpression = [46.519653, 6.632273];
-
+  // Geojson
   const vignes_1832 = JSON.parse(JSON.stringify(vignes_1832_json));
   const vignes_1873 = JSON.parse(JSON.stringify(vignes_1873_json));
   const vignes_1873_a = JSON.parse(JSON.stringify(vignes_1873_apparues_json));
   const vignes_1873_d = JSON.parse(JSON.stringify(vignes_1873_disparues_json));
 
+  // Overlays
   const berneyLayer = useRef();
   const siegfriedLayer = useRef();
 
-  const ShowBase = () => {
+  // Styles
+  const berney = '#03b1fc';
+  const siegfried = '#8a46d4';
+  const apparues = '#28bd28';
+  const disparues = '#b01c1c';
+
+  // Control if the base layers are shown
+  const ShowBaseLayers = () => {
     const map = useMap();
     map.on('overlayadd', () => {
       setShowLayers(false);
@@ -93,7 +94,7 @@ const Cadastre: FC = () => {
           </div>
         </div>
         <MapContainer center={center} zoom={14} scrollWheelZoom={false} /*ref={setMap}*/>
-          <ShowBase />
+          <ShowBaseLayers />
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -143,10 +144,3 @@ const Cadastre: FC = () => {
 };
 
 export default Cadastre;
-
-/*                eventHandlers={{
-                  click: () => {
-                    console.log('click');
-                    handleShow();
-                  },
-                }}*/
