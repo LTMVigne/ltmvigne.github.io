@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.5a1761f6.css",
-    "main.js": "/static/js/main.5a6e363c.js",
+    "main.css": "/static/css/main.5d689bfa.css",
+    "main.js": "/static/js/main.5ea3b519.js",
     "static/media/DecoupeBerney_072.png": "/static/media/DecoupeBerney_072.99e1afa0b9f6fb946614.png",
     "static/media/commune_lausanne.png": "/static/media/commune_lausanne.7a51afb7a8511fcc38a8.png",
     "index.html": "/index.html",
-    "main.5a1761f6.css.map": "/static/css/main.5a1761f6.css.map",
-    "main.5a6e363c.js.map": "/static/js/main.5a6e363c.js.map"
+    "main.5d689bfa.css.map": "/static/css/main.5d689bfa.css.map",
+    "main.5ea3b519.js.map": "/static/js/main.5ea3b519.js.map"
   },
   "entrypoints": [
-    "static/css/main.5a1761f6.css",
-    "static/js/main.5a6e363c.js"
+    "static/css/main.5d689bfa.css",
+    "static/js/main.5ea3b519.js"
   ]
 }
