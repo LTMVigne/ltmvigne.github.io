@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "vignes_2022_existantes",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Objet": [ "vignes" ], "Propriétaire": "Commune de Lausanne" }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ 6.614176891871859, 46.518933539297265 ], [ 6.614266975579116, 46.518998525920033 ], [ 6.614279693435664, 46.51899788729412 ], [ 6.614763750456131, 46.518783552437739 ], [ 6.614543144263424, 46.518596995688348 ], [ 6.61421930352817, 46.518791293761375 ], [ 6.614176891871859, 46.518933539297265 ] ] ] ] } }
+]
+}

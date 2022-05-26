@@ -3,15 +3,23 @@ import { LayerGroup, MapContainer, TileLayer, GeoJSON, LayersControl, useMap } f
 import 'leaflet/dist/leaflet.css';
 import vignes_1832_json from './cartes/vignes_1832.json';
 import vignes_1873_json from './cartes/vignes_1873.json';
-import vignes_1873_apparues_json from './cartes/vignes_1873_apparues.json';
-import vignes_1873_disparues_json from './cartes/vignes_1873_disparues.json';
+import vignes_1873_a_json from './cartes/vignes_1873_apparues.json';
+import vignes_1873_d_json from './cartes/vignes_1873_disparues.json';
+import vignes_1889_json from './cartes/vignes_1889.json';
+import vignes_1889_a_json from './cartes/vignes_1889_apparues.json';
+import vignes_1889_d_json from './cartes/vignes_1889_disparues.json';
+import vignes_1926_json from './cartes/vignes_1926.json';
+import vignes_1926_d_json from './cartes/vignes_1926_disparues.json';
+import vignes_2022_json from './cartes/vignes_2022.json';
+import vignes_2022_d_json from './cartes/vignes_2022_disparues.json';
+
 import { LatLngExpression } from 'leaflet';
 
 const Cadastre: FC = () => {
   const center: LatLngExpression = [46.519653, 6.632273];
 
-  const years = [1832, 1873, 1920, 2022];
-  const titres = ['Cadastre de Berney', 'Carte Siegried', 'Carte 2', 'Carte 3'];
+  const years = [1832, 1873, 1889, 1926, 2022];
+  const titres = ['Cadastre de Berney', 'Carte Siegried', 'Carte Siegfried', 'Carte Siegfried', 'SwissTopo'];
   const [slider, setSlider] = useState(0);
   const [year, setYear] = useState(1832);
   const [title, setTitle] = useState('');
@@ -20,16 +28,29 @@ const Cadastre: FC = () => {
   // Geojson
   const vignes_1832 = JSON.parse(JSON.stringify(vignes_1832_json));
   const vignes_1873 = JSON.parse(JSON.stringify(vignes_1873_json));
-  const vignes_1873_a = JSON.parse(JSON.stringify(vignes_1873_apparues_json));
-  const vignes_1873_d = JSON.parse(JSON.stringify(vignes_1873_disparues_json));
+  const vignes_1873_a = JSON.parse(JSON.stringify(vignes_1873_a_json));
+  const vignes_1873_d = JSON.parse(JSON.stringify(vignes_1873_d_json));
+  const vignes_1889 = JSON.parse(JSON.stringify(vignes_1889_json));
+  const vignes_1889_a = JSON.parse(JSON.stringify(vignes_1889_a_json));
+  const vignes_1889_d = JSON.parse(JSON.stringify(vignes_1889_d_json));
+  const vignes_1926 = JSON.parse(JSON.stringify(vignes_1926_json));
+  const vignes_1926_d = JSON.parse(JSON.stringify(vignes_1926_d_json));
+  const vignes_2022 = JSON.parse(JSON.stringify(vignes_2022_json));
+  const vignes_2022_d = JSON.parse(JSON.stringify(vignes_2022_d_json));
 
   // Overlays
   const berneyLayer = useRef();
-  const siegfriedLayer = useRef();
+  const siegfriedLayer1873 = useRef();
+  const siegfriedLayer1889 = useRef();
+  const siegfriedLayer1926 = useRef();
+  const swissTopoLayer = useRef();
 
   // Styles
   const berney = '#0EA5E9';
-  const siegfried = '#8a46d4';
+  const siegfried1873 = '#1d53a3';
+  const siegfried1889 = '#2b22d6';
+  const siegfried1926 = '#8a46d4';
+  const swisstopo2022 = '#d81ddb';
   const apparues = '#22C55E';
   const disparues = '#B91C1C';
 
@@ -40,7 +61,13 @@ const Cadastre: FC = () => {
       setShowLayers(false);
     });
     map.on('overlayremove', () => {
-      if (!map.hasLayer(berneyLayer.current) && !map.hasLayer(siegfriedLayer.current)) {
+      if (
+        !map.hasLayer(berneyLayer.current) &&
+        !map.hasLayer(siegfriedLayer1873.current) &&
+        !map.hasLayer(siegfriedLayer1889.current) &&
+        !map.hasLayer(siegfriedLayer1926.current) &&
+        !map.hasLayer(swissTopoLayer.current)
+      ) {
         setShowLayers(true);
       } else {
         setShowLayers(false);
@@ -50,18 +77,21 @@ const Cadastre: FC = () => {
   };
 
   useEffect(() => {
-    if (slider < 0.25) {
+    if (slider < 0.2) {
       setYear(years[0]);
       setTitle(titres[0]);
-    } else if (slider >= 0.25 && slider < 0.5) {
+    } else if (slider >= 0.2 && slider < 0.4) {
       setYear(years[1]);
       setTitle(titres[1]);
-    } else if (slider >= 0.5 && slider < 0.75) {
+    } else if (slider >= 0.4 && slider < 0.6) {
       setYear(years[2]);
       setTitle(titres[2]);
-    } else {
+    } else if (slider >= 0.6 && slider < 0.8) {
       setYear(years[3]);
       setTitle(titres[3]);
+    } else {
+      setYear(years[4]);
+      setTitle(titres[4]);
     }
   }, [slider]);
 
@@ -128,14 +158,40 @@ const Cadastre: FC = () => {
 
           {/*Base layers with dynamic change*/}
           <LayerGroup>
-            {showLayers && slider <= 0.25 && <GeoJSON data={vignes_1832} style={{ color: berney }} />}
+            {showLayers && slider < 0.2 && <GeoJSON data={vignes_1832} style={{ color: berney }} />}
           </LayerGroup>
           <LayerGroup>
-            {showLayers && slider > 0.25 && (
+            {showLayers && slider >= 0.2 && slider < 0.4 && (
               <>
                 <GeoJSON data={vignes_1873} style={{ color: berney }} />
                 <GeoJSON data={vignes_1873_a} style={{ color: apparues }} />
                 <GeoJSON data={vignes_1873_d} style={{ color: disparues }} />
+              </>
+            )}
+          </LayerGroup>
+          <LayerGroup>
+            {showLayers && slider >= 0.4 && slider < 0.6 && (
+              <>
+                <GeoJSON data={vignes_1889} style={{ color: berney }} />
+                <GeoJSON data={vignes_1889_a} style={{ color: apparues }} />
+                <GeoJSON data={vignes_1889_d} style={{ color: disparues }} />
+              </>
+            )}
+          </LayerGroup>
+          <LayerGroup>
+            {showLayers && slider >= 0.6 && slider < 0.8 && (
+              <>
+                <GeoJSON data={vignes_1926} style={{ color: berney }} />
+                <GeoJSON data={vignes_1926_d} style={{ color: disparues }} />
+              </>
+            )}
+          </LayerGroup>
+
+          <LayerGroup>
+            {showLayers && slider >= 0.8 && (
+              <>
+                <GeoJSON data={vignes_2022_d} style={{ color: disparues }} />
+                <GeoJSON data={vignes_2022} style={{ color: berney }} />
               </>
             )}
           </LayerGroup>
@@ -149,9 +205,27 @@ const Cadastre: FC = () => {
             </LayersControl.Overlay>
 
             <LayersControl.Overlay name="Vignes 1873">
-              <LayerGroup ref={siegfriedLayer}>
-                <GeoJSON data={vignes_1873_a} style={{ color: siegfried }} />
-                <GeoJSON data={vignes_1873} style={{ color: siegfried }} />
+              <LayerGroup ref={siegfriedLayer1873}>
+                <GeoJSON data={vignes_1873_a} style={{ color: siegfried1873 }} />
+                <GeoJSON data={vignes_1873} style={{ color: siegfried1873 }} />
+              </LayerGroup>
+            </LayersControl.Overlay>
+
+            <LayersControl.Overlay name="Vignes 1889">
+              <LayerGroup ref={siegfriedLayer1889}>
+                <GeoJSON data={vignes_1889_a} style={{ color: siegfried1889 }} />
+                <GeoJSON data={vignes_1889} style={{ color: siegfried1889 }} />
+              </LayerGroup>
+            </LayersControl.Overlay>
+
+            <LayersControl.Overlay name="Vignes 1926">
+              <LayerGroup ref={siegfriedLayer1926}>
+                <GeoJSON data={vignes_1926} style={{ color: siegfried1926 }} />
+              </LayerGroup>
+            </LayersControl.Overlay>
+            <LayersControl.Overlay name="Vignes 2022">
+              <LayerGroup ref={swissTopoLayer}>
+                <GeoJSON data={vignes_2022} style={{ color: swisstopo2022 }} />
               </LayerGroup>
             </LayersControl.Overlay>
           </LayersControl>
