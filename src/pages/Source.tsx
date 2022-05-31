@@ -35,6 +35,14 @@ const Source: FC = () => {
             </a>
           </li>
           <li>
+            <a
+              target="#"
+              href="https://museris.lausanne.ch/"
+              className="hover:text-blue-600"
+            >{`Sources iconographiques`}</a>
+            , {`Archives du Musée Historique de Lausanne`}
+          </li>
+          <li>
             <a target="#" href="https://ekds.ch/library/book:051">
               <span className="italic hover:text-blue-600">
                 Les monuments d&apos;art et d&apos;histoire du canton de vaud Tome 1: La ville de Lausanne.
