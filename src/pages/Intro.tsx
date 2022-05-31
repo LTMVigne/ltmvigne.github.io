@@ -7,12 +7,15 @@ const Intro: FC = () => {
       <div className="flex-1 md:pr-14 self-center pb-8">
         <h1 className="text-4xl text-left text-gray-900">Introduction</h1>
         <p className="indent-5 text-lg text-justify py-4">
-          {`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-          standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-          make a type specimen book. It has survived not only five centuries, but also the leap into electronic
-          typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
-          sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
-          PageMaker including versions of Lorem Ipsum.`}
+          {`Dans le cadre du cours Histoire Urbaine Digitale: Lausanne Time Machine, 
+          nous avons décidé de nous pencher plus en détails sur le cas des vignes de Lausanne. 
+          En effet, considéré comme un symbole sociologique et culturel du paysage lémanique, 
+          la viticulture est l’un des principaux axes économiques de la région au XIXe siècle. 
+          Les versants du Léman sont alors bordés par de nombreux vignobles. Or comme nous pouvons 
+          l'observer aujourd’hui à Lausanne, entre le quartier du Flon et Ouchy, la vaste majorité 
+          des vignes a disparu. Ainsi, en partant du Cadastre de Berney de 1832, nous avons tenté de 
+          comprendre comment l’urbanisation de Lausanne au XIXe siècle a transformé le paysage viticole 
+          du sud de la ville.`}
         </p>
       </div>
       <img src={cadastre_1} alt="" className="md:w-1/2 md:h-1/2 flex-1" />

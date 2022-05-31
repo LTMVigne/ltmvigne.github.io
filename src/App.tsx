@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Footer from './Footer';
 import Home from './Home';
 import NavBar from './NavBar';
-import Context from './pages/Contexte';
+import Context from './pages/dynamique/Contexte';
 import Processus from './pages/Processus';
 import Dynamique from './pages/dynamique/Dynamique';
 import Preservation from './pages/dynamique/Preservation';
-import Tourisme from './pages/dynamique/Tourisme';
+import Tourisme from './pages/dynamique/Gare';
 import Urbanisation from './pages/dynamique/Urbanisation';
 import Intro from './pages/Intro';
 import Source from './pages/Source';
@@ -25,10 +25,10 @@ function App() {
         <Home />
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <Intro />
-          <Context />
-          <Cadastre />
           <Processus />
+          <Cadastre />
           <Dynamique />
+          <Context />
           <Tourisme />
           <Urbanisation />
           <Preservation />
