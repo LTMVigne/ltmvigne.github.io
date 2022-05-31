@@ -1,15 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.5d689bfa.css",
-    "main.js": "/static/js/main.5ea3b519.js",
+    "main.css": "/static/css/main.20767d09.css",
+    "main.js": "/static/js/main.55dae409.js",
     "static/media/DecoupeBerney_072.png": "/static/media/DecoupeBerney_072.99e1afa0b9f6fb946614.png",
+    "static/media/voieries.png": "/static/media/voieries.a77214eabf60228fee2c.png",
+    "static/media/mercier.png": "/static/media/mercier.aec3cfdaa726d4740af8.png",
     "static/media/commune_lausanne.png": "/static/media/commune_lausanne.7a51afb7a8511fcc38a8.png",
+    "static/media/languedoc.png": "/static/media/languedoc.4054efddb39e4b5cd2ef.png",
+    "static/media/milan.png": "/static/media/milan.57e3bf9a9683c1986f0c.png",
+    "static/media/valency.png": "/static/media/valency.d28c77128cec8de70e37.png",
+    "static/media/quartierGareDepuisMontbenon.jpg": "/static/media/quartierGareDepuisMontbenon.7f3f616b91a331e7ca88.jpg",
+    "static/media/gare.jpg": "/static/media/gare.d942edce5d3883d2d8d0.jpg",
+    "static/media/georgette.jpg": "/static/media/georgette.683d9d6c51361bc75dda.jpg",
+    "static/media/phylloxera.jpg": "/static/media/phylloxera.2c0498a48ce09d33e66b.jpg",
+    "static/media/avenueDeRosemont.jpg": "/static/media/avenueDeRosemont.506f9ae798e8365d2aec.jpg",
     "index.html": "/index.html",
-    "main.5d689bfa.css.map": "/static/css/main.5d689bfa.css.map",
-    "main.5ea3b519.js.map": "/static/js/main.5ea3b519.js.map"
+    "main.20767d09.css.map": "/static/css/main.20767d09.css.map",
+    "main.55dae409.js.map": "/static/js/main.55dae409.js.map"
   },
   "entrypoints": [
-    "static/css/main.5d689bfa.css",
-    "static/js/main.5ea3b519.js"
+    "static/css/main.20767d09.css",
+    "static/js/main.55dae409.js"
   ]
 }
