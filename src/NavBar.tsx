@@ -68,9 +68,6 @@ const NavBar = () => {
                       <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                           <a href="#" className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
-                            {`Contexte historique`}
-                          </a>
-                          <a href="#" className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
                             {`L'arrivée de la gare`}
                           </a>
                           <a href="#" className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
@@ -80,7 +77,7 @@ const NavBar = () => {
                             {`Les espaces verts`}
                           </a>
                           <a href="#" className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
-                            {`Aujourd'hui`}
+                            {`La dernière vigne`}
                           </a>
                         </div>
                       </div>
