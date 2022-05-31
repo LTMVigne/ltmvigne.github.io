@@ -28,7 +28,7 @@ const Urbanisation: FC = () => {
           </div>
         </div>
 
-        <div className="lg:flex lg:flex-wrap">
+     
           <p className="indent-5 text-lg text-justify py-4 lg:pr-10">
             {`Or au même moment, Lausanne connaît une explosion démographique, entre 1884 et 1910 
             sa population se voit quasiment doublé (de 33 340 à 64 446 habitants). L’enquête de 
@@ -39,11 +39,11 @@ const Urbanisation: FC = () => {
             quasi Haussmannien, de grandes percées rectilignes, telles l’Avenue Fréderic-César-de-la-Harpe, 
             sont réalisées pour relier la vieille ville à la gare, jusqu’à Ouchy.`}
           </p>
-          <div className="flex-1 py-4 text-left lg:text-center">
-            <img id="avenues" src={avenues} alt="" className="flex-1" />
+          <div className="flex justify-center py-6">
+            <img id="avenues" src={avenues} alt="" className="w-[726.75px] h-[684px]"/>
             <label htmlFor="avenues"></label>
           </div>
-        </div>
+
 
         <div className="lg:flex lg:flex-wrap">
           <p className="indent-5 text-lg text-justify py-4 lg:pr-10">
