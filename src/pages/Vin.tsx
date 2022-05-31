@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import profession from '../assets/professions.jpg';
 
 const Vin: FC = () => {
   return (
@@ -11,7 +12,7 @@ const Vin: FC = () => {
           consommation de vin, or ce n’est pas ce qui se passe. En étudiant l’Almanach pour le commerce et l’industrie
           de 1832, ainsi que les indicateurs vaudois de 1880, 1886 et 1898, on observe les faits suivants:`}
         </p>
-        <ul className="text-left text-lg list-disc ml-20">
+        <ul className="text-justify text-lg list-disc ml-20">
           <li>{`le nombre de marchands de vin est de 4 en 1832 et augmente jusqu’à 74 en 1898`}</li>
           <li>{`le nombre de brasseries passe de 1 à 13 entre 1832 et 1898`}</li>
           <li>{`le nombre de cafés explose: ces derniers proposent notamment des vins, des bières et des spiritueux`}</li>
@@ -21,6 +22,10 @@ const Vin: FC = () => {
             sont majoritairement importés depuis l’étranger.`}
           </li>
         </ul>
+
+        <div className="flex justify-center py-4">
+          <img src={profession} alt="" className="w-[985px] h-[504px]" />
+        </div>
 
         <p className="indent-5 text-lg text-justify py-4">
           {`L’augmentation, à la fois de la consommation de vin mais aussi de bière, traduit une hausse générale de la

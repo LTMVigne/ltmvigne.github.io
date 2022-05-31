@@ -18,7 +18,7 @@ const Intro: FC = () => {
           du sud de la ville.`}
         </p>
       </div>
-      <img src={cadastre_1} alt="" className="md:w-1/2 md:h-1/2 flex-1" />
+      <img src={cadastre_1} alt="" className="w-[588px] h-632px flex-1" />
     </div>
   );
 };
