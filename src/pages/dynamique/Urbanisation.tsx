@@ -4,9 +4,9 @@ import avenues from '../../assets/voieries.png';
 
 const Urbanisation: FC = () => {
   return (
-    <div id="urbanisation" className="mt-10 pt-10">
+    <div id="urbanisation" className="">
       <div className="flex-1 self-center pb-8">
-        <h1 className="text-4xl text-left text-gray-900">Urbanisation</h1>
+        <h1 className="text-3xl text-left text-gray-900">Urbanisation</h1>
         <div className="lg:flex lg:flex-wrap justify-between">
           <p className="flex-1 indent-5 text-lg text-justify pt-4 lg:pr-10">
             {`Jusqu’à présent nos recherches étaient centrées sur l’urbanisation comme 

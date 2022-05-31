@@ -3,7 +3,6 @@ import './App.css';
 import Footer from './Footer';
 import Home from './Home';
 import NavBar from './NavBar';
-import Context from './pages/dynamique/Contexte';
 import Processus from './pages/Processus';
 import Dynamique from './pages/dynamique/Dynamique';
 import Preservation from './pages/dynamique/Preservation';
@@ -13,6 +12,8 @@ import Intro from './pages/Intro';
 import Source from './pages/Source';
 import About from './pages/About';
 import Cadastre from './pages/Cadastre';
+import Today from './pages/dynamique/Today';
+import Vin from './pages/Vin';
 
 function App() {
   return (
@@ -28,10 +29,11 @@ function App() {
           <Processus />
           <Cadastre />
           <Dynamique />
-          <Context />
           <Tourisme />
           <Urbanisation />
           <Preservation />
+          <Today />
+          <Vin />
 
           <div className="flex">
             <div className="w-1/2">

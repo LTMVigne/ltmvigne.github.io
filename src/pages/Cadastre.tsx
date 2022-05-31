@@ -231,14 +231,11 @@ const Cadastre: FC = () => {
           </LayersControl>
         </MapContainer>
       </div>
-      <p className="indent-5 text-lg text-justify py-8">
-        {`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-          standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-          make a type specimen book. It has survived not only five centuries, but also the leap into electronic
-          typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
-          sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
-          PageMaker including versions of Lorem Ipsum.`}
+      <p className="indent-5 text-lg text-justify py-4">
+        {`Entre 1832 et 1873, la surface globale des vignes a légèrement diminué, effectivement certaines ont disparu au niveau de la gare par exemple due à sa construction en 1856. D’autre part, à l'ouest de Lausanne nous pouvons observer l'apparition de nouvelles vignes, souvent venant compléter un vignoble existant. Le même phénomène se produit entre 1873 et 1889 quoique avec une disparition un peu plus intense, les vignes dans l’axe Lausanne-gare - Ouchy disparaissent grandement. Cependant, cette disparition s’accompagne de quelques apparitions, notamment à l’ouest. Au total, entre 1832 et 1889, la 24.4% des surfaces de vignes disparaissent. On observe une grande disparition des vignes entre 1889 et 1926, environ 78.7% de la surface viticole a disparu. La dernière période, soit de 1926 à aujourd’hui, voit la disparition totale des vignobles du sud de Lausanne, seule une petite parcelle de vigne existe encore !`}
       </p>
+      <p className="indent-5 text-lg text-justify">{`Les potentiels dynamiques, mise à jour par nos soins et explicitées de façon plus conséquente ci-dessous, sont basées sur les événements intervenus pendant les intervalles de temps entre chaque carte : La construction de la gare et l’arrivée du tourisme; L’apparition d’un parasite, le phylloxera, et la crise du logement; finalement, le besoin d’espace vert publique en zone urbaine.
+`}</p>
     </div>
   );
 };
