@@ -35,14 +35,8 @@ function App() {
           <Today />
           <Vin />
 
-          <div className="flex">
-            <div className="w-1/2">
-              <Source />
-            </div>
-            <div className="w-1/2">
-              <About />
-            </div>
-          </div>
+          <Source />
+          <About />
         </div>
       </div>
 

@@ -67,16 +67,16 @@ const NavBar = () => {
                     <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                       <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                          <a href="#" className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                          <a href="#tourisme" className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
                             {`L'arrivée de la gare`}
                           </a>
-                          <a href="#" className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                          <a href="#urbanisation" className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
                             {`L'urbanisation`}
                           </a>
-                          <a href="#" className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                          <a href="#preservation" className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
                             {`Les espaces verts`}
                           </a>
-                          <a href="#" className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                          <a href="#today" className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
                             {`La dernière vigne`}
                           </a>
                         </div>
@@ -86,8 +86,8 @@ const NavBar = () => {
                 </>
               )}
             </Popover>
-            <a href="#source" className="mx-4 text-xl font-medium text-gray-700 hover:text-gray-900">
-              Métiers
+            <a href="#vin" className="mx-4 text-xl font-medium text-gray-700 hover:text-gray-900">
+              Consommation
             </a>
           </Popover.Group>
 
@@ -150,8 +150,8 @@ const NavBar = () => {
                   </a>
                 </nav>
                 <nav className="grid gap-y-8 text-lg">
-                  <a href="#dynamique" className="text-xl font-medium text-gray-700 hover:text-gray-900">
-                    Métiers
+                  <a href="#vin" className="text-xl font-medium text-gray-700 hover:text-gray-900">
+                    Consommation
                   </a>
                 </nav>
                 <nav className="grid gap-y-8 text-lg">

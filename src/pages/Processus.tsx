@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 const Processus: FC = () => {
   return (
     <div id="processus" className="block md:flex md:flex-wrap mt-10 pt-10">
-      <div className="flex-1 self-center pb-8">
+      <div className="flex-1 self-center">
         <h1 className="text-4xl text-left text-gray-900">Processus</h1>
         <p className="indent-5 text-lg text-justify py-4">
           {`Notre point de départ était le cadastre be Berney de 1832. Nous avons 

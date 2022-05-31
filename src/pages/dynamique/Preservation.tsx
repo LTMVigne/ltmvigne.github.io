@@ -6,7 +6,7 @@ import valency from '../../assets/valency.png';
 const Preservation: FC = () => {
   return (
     <div id="preservation" className="block md:flex md:flex-wrap mt-10 pt-10">
-      <div className="flex-1 self-center pb-8">
+      <div className="flex-1 self-center">
         <h1 className="text-3xl text-left text-gray-900">Espaces verts</h1>
 
         <p className="indent-5 text-lg text-justify py-4">
@@ -20,12 +20,24 @@ const Preservation: FC = () => {
           bourgeoise dans le but d’en faire un parc pour le grand public.`}
         </p>
 
-        <h2 className="text-xl text-left text-gray-900">Parc de Milan et colline de Montriond</h2>
+        <div className="flex items-end justify-between w-full mb-14">
+          <div className="w-[356px] h-[270px] text-center">
+            <img id="milan" src={milan} alt="" className="w-[365px] h-[270px] mb-2" />
+            <label htmlFor="milan">Parc de Milan et colline de Montriond</label>
+          </div>
 
-        <div className="flex justify-center ">
-          <img id="milan" src={milan} alt="" className="w-[549px] h-[416px]" />
+          <div className="w-[325px] h-[263px] text-center">
+            <img id="valency" src={valency} alt="" className="w-[325px] h-[263px] mb-2" />
+            <label htmlFor="valency">Parc de Valency</label>
+          </div>
+
+          <div className="w-[400px] h-[257px] text-center">
+            <img id="mercier" src={mercier} alt="" className="w-[400px] h-[257px] mb-2" />
+            <label htmlFor="mercier">Promenade Mercier</label>
+          </div>
         </div>
 
+        <h2 className="text-xl text-left text-gray-900">Parc de Milan et colline de Montriond</h2>
         <p className="indent-5 text-lg text-justify py-4">
           {`Dès 1832, la colline de Montriond est en grande partie recouverte de vignes. En 1894, la construction d’une
           route est envisagée à travers l’actuel parc de Milan (en contrebas de la colline), c’est à cette occasion que
@@ -34,11 +46,6 @@ const Preservation: FC = () => {
         </p>
 
         <h2 className="text-xl text-left text-gray-900">Parc de Valency</h2>
-
-        <div className="flex justify-center ">
-          <img id="milan" src={valency} alt="" className="w-[500px] h-[406px]" />
-        </div>
-
         <p className="indent-5 text-lg text-justify py-4">
           {`Le parc de Valency fut également l’emplacement de nombreuses vignes. Les habitants de Lausanne signent en 1906
           une pétition pour le rachat des parcelles et leur transformation en espace de promenade. La ville achètera
@@ -47,9 +54,6 @@ const Preservation: FC = () => {
         </p>
 
         <h2 className="text-xl text-left text-gray-900">Promenade Mercier</h2>
-        <div className="flex justify-center ">
-          <img id="milan" src={mercier} alt="" className="w-[616px] h-[396px]" />
-        </div>
         <p className="indent-5 text-lg text-justify py-4">
           {`Comme dans les cas précédents, la parcelle où aujourd'hui est construite la promenade Mercier était recouverte
           de vignes en 1889. En 1889, les riverains s’opposent à la construction de nouvelle habitations. La zone est
