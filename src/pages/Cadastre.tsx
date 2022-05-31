@@ -51,7 +51,7 @@ const Cadastre: FC = () => {
   const siegfried1889 = '#2b22d6';
   const siegfried1926 = '#8a46d4';
   const swisstopo2022 = '#d81ddb';
-  const apparues = '#22C55E';
+  const apparues = '#095228';
   const disparues = '#B91C1C';
 
   // Control if the base layers are shown
