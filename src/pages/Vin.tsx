@@ -27,10 +27,9 @@ const Vin: FC = () => {
           </li>
         </ul>
 
-        
         <p className="indent-5 text-lg text-justify py-4">
           {`En somme, ce graphique traduit une hausse générale de la consommation d’alcool. Ce dernier devient un produit de consommation courant avec l’amélioration des techniques de distillation et le développement du réseau de chemin de fer. Ce sont particulièrement les populations défavorisées des milieux ruraux et la classe ouvrière qui s’y réfugient, pour supporter les conditions de travail et de vie difficiles, telles que l’insalubrité de la ville, causées par l’industrialisation. Les comportements violents dus à l’alcool se multiplient et les mouvements de tempérance et d’abstinence émergent en réponse pour tenter de freiner cette consommation.
-La demande de vin est accrue tandis que les vignes lausannoises disparaissent. Pour y répondre, les vins sont donc importés depuis l’étranger par voie ferrée, et leurs prix faibles, font vite concurrence à la culture viticole locale restante, cher et peu rémunératrice.`}
+La demande de vin est accrue tandis que les vignes lausannoises disparaissent. Pour y répondre, les vins sont donc importés depuis l’étranger par voie ferrée, et leurs prix faibles, font vite concurrence à la culture viticole locale restante, chère et peu rémunératrice.`}
         </p>
       </div>
     </div>
