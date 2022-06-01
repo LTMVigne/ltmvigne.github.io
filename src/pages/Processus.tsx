@@ -17,7 +17,7 @@ const Processus: FC = () => {
           perspectives nous avons également interviewé le Directeur de la haute école de 
           viticulture du canton de vaud, Conrad Briguet et Philippe Droz, spécialiste en vigne 
           chez Agridea. Finalement pour concrétiser nos idées nous avons étudié plusieurs cas 
-          particulier qui sont détaillés plus bas. `}
+          particuliers qui sont détaillés plus bas. `}
         </p>
       </div>
     </div>
