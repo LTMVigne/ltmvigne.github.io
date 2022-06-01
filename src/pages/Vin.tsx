@@ -36,7 +36,7 @@ const Vin: FC = () => {
           dus à l’alcool se multiplient et les mouvements de tempérance et d’abstinence émergent en réponse pour tenter
           de freiner la consommation. La demande de vin est accru tandis que les vignes lausannoises disparaissent.
           Facilité par la voie ferrée, les vins sont donc importés depuis l’étranger et leur faible prix fait vite
-          concurrence à la culture viticole locale restante, cher et peu rémunératrice.`}
+          concurrence à la culture viticole locale restante, chère et peu rémunératrice.`}
         </p>
       </div>
     </div>

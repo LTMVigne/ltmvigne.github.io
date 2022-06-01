@@ -12,7 +12,7 @@ const Today: FC = () => {
           écoles environnantes. Deux employés communaux s’en occupent tout au long de l’année et les récoltes sont
           ensuite redistribuées aux élèves. La vigne s'étend sur 1000 m2 avec quelques 600 pieds de vignes produisant
           800 kg de raisin par année de 14 variétés différentes. Les vignes furent arrachée en 1930, mais replantée en
-          1987à titre didactique et symbolique par la ville qui a acquis le terrain en 1982.`}
+          1987 à titre didactique et symbolique par la ville qui a acquis le terrain en 1982.`}
         </p>
         <div className="flex flex-col items-center mt-4">
           <img id="languedoc" src={languedoc} alt="" className="w-[518px] h-[395px] mb-2" />

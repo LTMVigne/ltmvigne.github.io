@@ -51,7 +51,7 @@ const Urbanisation: FC = () => {
             {`Ces avenues sont bordées par de nouvelles constructions qui, à l’image de Paris, utilisent 
             l’îlot comme matrice de construction. Un exemple type serait le quartier Georgette, où le 
             bâti devient une interface entre la ville et les cours intérieurs.
-            Finalement, la ville se détache de ce mouvement au début du 20ème siècle, pour adopter 
+            Finalement, la ville se détache de ce mouvement au début du XXème siècle, pour adopter 
             un principe typologique en adéquation parfaite avec sa géographie. Les “plots” de Lausanne 
             émergent, notamment autour de l’Avenu Juste Olivier. Ces villas autonomes, tout comme l’îlot, 
             offrent un filtre entre la rue et les jardins. L’avantage de ce modèle ne se révèle réellement 

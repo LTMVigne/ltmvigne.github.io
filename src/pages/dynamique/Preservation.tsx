@@ -56,7 +56,7 @@ const Preservation: FC = () => {
         <h2 className="text-xl text-left text-gray-900">Promenade Mercier</h2>
         <p className="indent-5 text-lg text-justify py-4">
           {`Comme dans les cas précédents, la parcelle où aujourd'hui est construite la promenade Mercier était recouverte
-          de vignes en 1889. En 1889, les riverains s’opposent à la construction de nouvelle habitations. La zone est
+          de vignes. En 1889, les riverains s’opposent à la construction de nouvelles habitations. La zone est
           alors déjà réputée pour sa belle vue. Les habitants usent d’une pétition pour faire valoir l’importance du
           lieu. En 1910 la ville finit les travaux et la promenade Mercier voit le jour. C’est grâce à un don de
           Jean-Jacques Mercier fils en 1903 que la commune a pu entreprendre de tels travaux. Ce dernier demanda que la
