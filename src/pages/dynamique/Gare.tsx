@@ -11,7 +11,7 @@ const Tourisme: FC = () => {
           créée une forte augmentation du tourisme. La gare devant être à proximité de la ville, devait nécessairement
           empiété sur un terrain vignoble. Une partie de l’économie agricole est donc convertie en économie de tourisme.
           Ceci se traduit notamment par la construction d’hôtels, restaurants, cafés etc. Suite à des mouvements
-          similaires en France et en Italie les personnes les plus aisés s'installent dans des endroits propice à un bon
+          similaires en France et en Italie les personnes les plus aisées s'installent dans des endroits propice à un bon
           ensoleillement. En effet, les années 1840 marquent une intensification de l'activité touristique avec le
           développement notable de la Riviera lémanique.`}
         </p>
