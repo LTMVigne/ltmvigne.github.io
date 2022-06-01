@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.4328fadd.css",
-    "main.js": "/static/js/main.7a34fd83.js",
+    "main.js": "/static/js/main.13201691.js",
     "static/media/DecoupeBerney_072.png": "/static/media/DecoupeBerney_072.99e1afa0b9f6fb946614.png",
     "static/media/voieries.png": "/static/media/voieries.a77214eabf60228fee2c.png",
     "static/media/mercier.png": "/static/media/mercier.aec3cfdaa726d4740af8.png",
@@ -17,10 +17,10 @@
     "static/media/professions.jpg": "/static/media/professions.a47a6e661d25e001d3c4.jpg",
     "index.html": "/index.html",
     "main.4328fadd.css.map": "/static/css/main.4328fadd.css.map",
-    "main.7a34fd83.js.map": "/static/js/main.7a34fd83.js.map"
+    "main.13201691.js.map": "/static/js/main.13201691.js.map"
   },
   "entrypoints": [
     "static/css/main.4328fadd.css",
-    "static/js/main.7a34fd83.js"
+    "static/js/main.13201691.js"
   ]
 }
