@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.4328fadd.css",
-    "main.js": "/static/js/main.d3beca29.js",
+    "main.css": "/static/css/main.108309ac.css",
+    "main.js": "/static/js/main.af376da6.js",
     "static/media/DecoupeBerney_072.png": "/static/media/DecoupeBerney_072.99e1afa0b9f6fb946614.png",
     "static/media/voieries.png": "/static/media/voieries.a77214eabf60228fee2c.png",
     "static/media/mercier.png": "/static/media/mercier.aec3cfdaa726d4740af8.png",
@@ -16,11 +16,11 @@
     "static/media/avenueDeRosemont.jpg": "/static/media/avenueDeRosemont.506f9ae798e8365d2aec.jpg",
     "static/media/professions.jpg": "/static/media/professions.a47a6e661d25e001d3c4.jpg",
     "index.html": "/index.html",
-    "main.4328fadd.css.map": "/static/css/main.4328fadd.css.map",
-    "main.d3beca29.js.map": "/static/js/main.d3beca29.js.map"
+    "main.108309ac.css.map": "/static/css/main.108309ac.css.map",
+    "main.af376da6.js.map": "/static/js/main.af376da6.js.map"
   },
   "entrypoints": [
-    "static/css/main.4328fadd.css",
-    "static/js/main.d3beca29.js"
+    "static/css/main.108309ac.css",
+    "static/js/main.af376da6.js"
   ]
 }
