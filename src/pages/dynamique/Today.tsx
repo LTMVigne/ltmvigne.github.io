@@ -15,7 +15,7 @@ const Today: FC = () => {
           1987 à titre didactique et symbolique par la ville qui a acquis le terrain en 1982.`}
         </p>
         <div className="flex flex-col items-center mt-4">
-          <img id="languedoc" src={languedoc} alt="" className="w-[518px] h-[395px] mb-2" />
+          <img id="languedoc" src={languedoc} alt="" className="w-[518px] mb-2" />
           <label htmlFor="languedoc">Colline du Languedoc</label>
         </div>
       </div>
