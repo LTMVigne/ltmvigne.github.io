@@ -3,8 +3,8 @@ import cadastre_1 from './../assets/DecoupeBerney_072.png';
 
 const Intro: FC = () => {
   return (
-    <div id="intro" className="block md:flex md:flex-wrap mt-10 pt-20">
-      <div className="flex-1 md:pr-14 self-center pb-8">
+    <div id="intro" className="flex flex-col md:flex-row mt-10 pt-20">
+      <div className="flex-1 md:pr-14 pb-8">
         <h1 className="text-4xl text-left text-gray-900">Introduction</h1>
         <p className="indent-5 text-lg text-justify py-4">
           {`Dans le cadre du cours Histoire Urbaine Digitale: Lausanne Time Machine, 
@@ -18,7 +18,10 @@ const Intro: FC = () => {
           du sud de la ville.`}
         </p>
       </div>
-      <img src={cadastre_1} alt="" className="w-[588px] h-632px flex-1" />
+
+      <div className="self-center flex-1">
+        <img src={cadastre_1} alt="" className="w-[588px]" />
+      </div>
     </div>
   );
 };

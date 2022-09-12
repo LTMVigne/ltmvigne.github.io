@@ -19,7 +19,7 @@ const Cadastre: FC = () => {
   const center: LatLngExpression = [46.519653, 6.632273];
 
   const years = [1832, 1873, 1889, 1926, 2022];
-  const titres = ['Cadastre de Berney', 'Carte Siegried', 'Carte Siegfried', 'Carte Siegfried', 'SwissTopo'];
+  const titres = ['Cadastre de Berney', 'Carte Siegfried', 'Carte Siegfried', 'Carte Siegfried', 'SwissTopo'];
   const [slider, setSlider] = useState(0);
   const [year, setYear] = useState(1832);
   const [title, setTitle] = useState('');

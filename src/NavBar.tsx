@@ -11,19 +11,19 @@ const NavBar = () => {
   return (
     <Popover className="relative bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="w-full flex justify-between items-center border-b-2 border-gray-100 py-6 lg:space-x-10">
-          <div className="flex justify-start w-fit lg:flex-none">
+        <div className="w-full flex justify-between items-center border-b-2 border-gray-100 py-6 xl:space-x-10">
+          <div className="flex justify-start w-fit xl:flex-none">
             <a className="font-bold text-3xl" href="#">
               LTM
             </a>
           </div>
-          <div className="-mr-2 -my-2 lg:hidden">
+          <div className="-mr-2 -my-2 xl:hidden">
             <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
               <span className="sr-only">Open menu</span>
               <MenuIcon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
           </div>
-          <Popover.Group as="nav" className="hidden lg:flex w-fit justify-center">
+          <Popover.Group as="nav" className="hidden xl:flex w-fit justify-center">
             <a href="#" className="mx-4 text-xl font-medium text-gray-700 hover:text-gray-900">
               Home
             </a>
@@ -64,7 +64,7 @@ const NavBar = () => {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 translate-y-1"
                   >
-                    <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                    <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 xl:ml-0 xl:left-1/2 xl:-translate-x-1/2">
                       <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                           <a href="#tourisme" className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
@@ -91,11 +91,11 @@ const NavBar = () => {
             </a>
           </Popover.Group>
 
-          <Popover.Group className="hidden lg:flex w-fit justify-center">
-            <a href="#source" className="mx-4 text-xl font-medium text-gray-700 hover:text-gray-900">
+          <Popover.Group className="hidden xl:flex w-fit justify-center">
+            <a href="#source" className="self-center mx-4 text-xl font-medium text-gray-700 hover:text-gray-900">
               Sources
             </a>
-            <a href="#about" className="mx-4 text-xl font-medium text-gray-700 hover:text-gray-900">
+            <a href="#about" className="self-center mx-4 text-xl font-medium text-gray-700 hover:text-gray-900">
               A Propos
             </a>
           </Popover.Group>
@@ -111,7 +111,7 @@ const NavBar = () => {
         leaveFrom="opacity-100 scale-100"
         leaveTo="opacity-0 scale-95"
       >
-        <Popover.Panel focus className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden">
+        <Popover.Panel focus className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right xl:hidden">
           <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">

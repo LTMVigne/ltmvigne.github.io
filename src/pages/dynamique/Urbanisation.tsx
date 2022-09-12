@@ -30,9 +30,11 @@ const Urbanisation: FC = () => {
           réellement, et ce au dépens des vignes, qui représentent, par leur emplacement avec leur 
           vue dégagée sur le Léman mais aussi leur ensoleillement, des parcelles idéales.  `}
           </p>
-          <div className="pt-6 pl-4 text-left lg:text-center lg:w-1/6">
-            <img id="phyllo" src={phylloxera} alt="" className="w-[179px] h-[308px]" />
-            <label htmlFor="phyllo">Phylloxera vastatrix. BIU Santé Paris.</label>
+          <div className="flex flex-col pt-6 text-center items-center">
+            <img id="phyllo" src={phylloxera} alt="" className="self-center w-[179px] h-[308px]" />
+            <label htmlFor="phyllo" className="lg:w-2/3">
+              Phylloxera vastatrix. BIU Santé Paris.
+            </label>
           </div>
         </div>
 
@@ -41,9 +43,8 @@ const Urbanisation: FC = () => {
             quasi Haussmannien, de grandes percées rectilignes, telles l’Avenue Fréderic-César-de-la-Harpe, 
             sont réalisées pour relier la vieille ville à la gare, jusqu’à Ouchy.`}
         </p>
-        <div className="flex justify-center py-6">
-          <img id="avenues" src={avenues} alt="" className="w-[726.75px] h-[684px]" />
-          <label htmlFor="avenues"></label>
+        <div className="flex justify-center py-6 w-full">
+          <img id="avenues" src={avenues} alt="" className="w-[726.75px]" />
         </div>
 
         <div>
@@ -60,19 +61,19 @@ const Urbanisation: FC = () => {
             malgré la disparition des vignes, la ville parvient à retrouver son caractère bucolique.`}
           </p>
 
-          <div className="flex items-end justify-between w-full">
-            <div className="w-[370px] h-[384px] text-center">
-              <img id="georgette" src={georgette} alt="" className="w-[370px] h-[384px] mb-2" />
+          <div className="flex flex-col md:flex-row items-center md:items-start lg:items-end md:justify-between w-full">
+            <div className="mr-2 text-center mb-4 md:mb-0">
+              <img id="georgette" src={georgette} alt="" className="w-[370px] mb-2" />
               <label htmlFor="georgette">Vue sur le quartier de Georgette</label>
             </div>
 
-            <div className="w-[384px] h-[343px] text-center">
-              <img id="georgette" src={gare} alt="" className="w-[384px] h-[343px] mb-2" />
+            <div className="mx-2 text-center mb-4 md:mb-0">
+              <img id="georgette" src={gare} alt="" className="w-[384px] mb-2" />
               <label htmlFor="georgette">Vue sur le quartier de la Gare depuis Montbenon</label>
             </div>
 
-            <div className="w-[384px] h-[290px] text-center">
-              <img id="georgette" src={rosemont} alt="" className="w-[384px] h-[290px] mb-2" />
+            <div className="ml-2 text-center mb-4 md:mb-0">
+              <img id="georgette" src={rosemont} alt="" className="w-[384px] mb-2" />
               <label htmlFor="georgette">{`Vue des villas de l'avenue de la Rasude`}</label>
             </div>
           </div>
